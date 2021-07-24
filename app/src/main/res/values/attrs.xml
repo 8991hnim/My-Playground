@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircularProgressButton">
+        <attr name="progressColor" format="color" />
+        <attr name="cancelColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="backgroundDrawableRes" format="reference" />
+    </declare-styleable>
+
+</resources>
