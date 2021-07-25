@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_circular_progress_button.*
 import m.tech.customview.R
 
+/**
+ * @author 89hnim
+ * @since 24/07/2021
+ */
 class CircularProgressButtonFragment : Fragment(R.layout.fragment_circular_progress_button) {
 
     private var percent = 0

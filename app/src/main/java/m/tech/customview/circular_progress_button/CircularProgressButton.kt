@@ -15,14 +15,12 @@ import androidx.core.content.withStyledAttributes
 import m.tech.customview.R
 
 /**
- * @author minhta
+ * @author 89hnim
  * @since 24/07/2021
- * A image button with a border progress around it
- * Like download file attachments in Gapo App
+ * Image button with a border progress around it
+ * Eg: Download file attachments in Gapo App
  */
-class CircularProgressButton
-@JvmOverloads
-constructor(
+class CircularProgressButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -157,6 +155,13 @@ constructor(
         }
     }
 
+    private fun stopSweepAnim() {
+        objectAnimator?.cancel()
+        objectAnimator = null
+    }
+
+    private fun isRunning(): Boolean = isShowProgress
+
     fun cancel() {
         if (isRunning()) {
             stopSweepAnim()
@@ -164,13 +169,6 @@ constructor(
             currentSweepAngle = 0f
         }
     }
-
-    private fun stopSweepAnim() {
-        objectAnimator?.cancel()
-        objectAnimator = null
-    }
-
-    private fun isRunning(): Boolean = isShowProgress
 
     /** setter use for [sweepProperty] */
     private fun setCurrentSweep(sweepAngle: Float) {
