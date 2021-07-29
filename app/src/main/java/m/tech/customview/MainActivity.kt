@@ -1,13 +1,12 @@
 package m.tech.customview
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
-import m.tech.customview.circular_progress_button.CircularProgressButtonFragment
-import m.tech.customview.collapse_text.CollapsableTextViewFragment
+import m.tech.circular_progress_button.CircularProgressButtonFragment
+import m.tech.collapse_text_view.CollapsableTextViewFragment
 
 /**
  * @author 89hnim
@@ -22,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     fun navCircularProgressButton(view: View) {
         supportFragmentManager.commit(allowStateLoss = true) {
-            Toast.makeText(this@MainActivity, "navCircularProgressButton", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "navCircularProgressButton", Toast.LENGTH_SHORT)
+                .show()
             replace(R.id.fragment_container_view, CircularProgressButtonFragment())
             addToBackStack(null)
         }

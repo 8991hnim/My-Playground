@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Collapsable Text View"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <m.tech.collapse_text_view.CollapsableTextView
+        android:id="@+id/tv_collapsable_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3E3E3"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Collapsable Text View Without Animation"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <m.tech.collapse_text_view.CollapsableTextView
+        android:id="@+id/tv_collapsable_without_anim"
+        android:layout_width="match_parent"
+        android:background="#E3E3E3"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Collapsable Text View With Many lines break"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <m.tech.collapse_text_view.CollapsableTextView
+        android:id="@+id/tv_collapsable_br"
+        android:layout_width="match_parent"
+        android:background="#E3E3E3"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Collapsable Text View Scrollable"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <m.tech.collapse_text_view.CollapsableTextView
+        android:id="@+id/tv_collapsable_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3E3E3"
+        android:maxHeight="80dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/black" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

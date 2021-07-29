@@ -1,9 +1,8 @@
 import dep.Versions
 import dep.Fundamentals
-import dep.Modules
 
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-android-extensions' //don't use this in real world app. use binding instead
 }
@@ -13,13 +12,13 @@ android {
     buildToolsVersion Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId "m.tech.customview"
         minSdkVersion Versions.minSdkVersion
         targetSdkVersion Versions.targetSdkVersion
         versionCode Versions.Release.versionCode
         versionName Versions.Release.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -38,18 +37,10 @@ android {
 }
 
 dependencies {
-
-    implementation project(Modules.Features.circularProgressButton)
-    implementation project(Modules.Features.collapseTextView)
-
     implementation Fundamentals.Kotlin.stdLib
-
+    
     implementation Fundamentals.AndroidX.core
     implementation Fundamentals.AndroidX.appcompat
-    implementation Fundamentals.AndroidX.activityKtx
-    implementation Fundamentals.AndroidX.fragmentKtx
 
-    implementation Fundamentals.Ui.material
     implementation Fundamentals.Ui.constraintLayout
-
 }
