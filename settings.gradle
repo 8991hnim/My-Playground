@@ -2,3 +2,4 @@ rootProject.name = "CustomView"
 include ':app'
 include ':custom-view:circular-progress-button'
 include ':custom-view:collapse-text-view'
+include ':test-repo'

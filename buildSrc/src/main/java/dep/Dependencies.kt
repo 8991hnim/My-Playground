@@ -35,6 +35,8 @@ object Fundamentals {
 
 object Modules {
 
+    const val testRepo = ":test-repo"
+
     object Features {
         const val collapseTextView = ":custom-view:collapse-text-view"
         const val circularProgressButton = ":custom-view:circular-progress-button"
