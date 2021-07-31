@@ -36,10 +36,21 @@ object Fundamentals {
 object Modules {
 
     const val testRepo = ":test-repo"
+    const val navigation = ":navigation"
 
     object Features {
         const val collapseTextView = ":custom-view:collapse-text-view"
         const val circularProgressButton = ":custom-view:circular-progress-button"
+    }
+
+}
+
+object Libraries{
+
+    object DeepLink{
+        private const val deeplink_version = "5.4.3"
+        const val dispatch = "com.airbnb:deeplinkdispatch:$deeplink_version"
+        const val processor = "com.airbnb:deeplinkdispatch-processor:$deeplink_version"
     }
 
 }

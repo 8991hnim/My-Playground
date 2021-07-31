@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_collapsable_text_view.*
  * @author 89hnim
  * @since 25/07/2021
  */
-class CollapsableTextViewFragment : Fragment(R.layout.fragment_collapsable_text_view) {
+internal class CollapsableTextViewFragment : Fragment(R.layout.fragment_collapsable_text_view) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

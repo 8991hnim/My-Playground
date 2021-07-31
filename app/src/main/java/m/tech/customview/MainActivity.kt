@@ -2,11 +2,8 @@ package m.tech.customview
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.commit
-import m.tech.circular_progress_button.CircularProgressButtonFragment
-import m.tech.collapse_text_view.CollapsableTextViewFragment
+import m.tech.navigation.DeepLinkNavigation
 
 /**
  * @author 89hnim
@@ -20,19 +17,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun navCircularProgressButton(view: View) {
-        supportFragmentManager.commit(allowStateLoss = true) {
-            Toast.makeText(this@MainActivity, "navCircularProgressButton", Toast.LENGTH_SHORT)
-                .show()
-            replace(R.id.fragment_container_view, CircularProgressButtonFragment())
-            addToBackStack(null)
-        }
+        DeepLinkNavigation.CustomViewScope.navToCircularProgressButton(this)
     }
 
     fun navCollapsableTextView(view: View) {
-        supportFragmentManager.commit(allowStateLoss = true) {
-            Toast.makeText(this@MainActivity, "navCollapsableTextView", Toast.LENGTH_SHORT).show()
-            replace(R.id.fragment_container_view, CollapsableTextViewFragment())
-            addToBackStack(null)
-        }
+        DeepLinkNavigation.CustomViewScope.navToCollapseTextView(this)
     }
 }

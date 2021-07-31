@@ -1,11 +1,13 @@
-import dep.Versions
 import dep.Fundamentals
+import dep.Libraries
 import dep.Modules
+import dep.Versions
 
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions' //don't use this in real world app. use binding instead
+    id 'kotlin-kapt'
 }
 
 android {
@@ -39,11 +41,12 @@ android {
 
 dependencies {
     implementation project(Modules.testRepo)
+    implementation project(Modules.navigation)
     implementation project(Modules.Features.circularProgressButton)
     implementation project(Modules.Features.collapseTextView)
 
     implementation Fundamentals.Kotlin.stdLib
-
+    
     implementation Fundamentals.AndroidX.core
     implementation Fundamentals.AndroidX.appcompat
     implementation Fundamentals.AndroidX.activityKtx
@@ -51,5 +54,7 @@ dependencies {
 
     implementation Fundamentals.Ui.material
     implementation Fundamentals.Ui.constraintLayout
+
+    kapt Libraries.DeepLink.processor
 
 }

@@ -2,4 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="m.tech.collapse_text_view">
 
+    <application>
+        <activity android:name=".CollapseTextViewActivity" />
+    </application>
+
 </manifest>

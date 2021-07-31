@@ -19,7 +19,7 @@ import androidx.core.content.withStyledAttributes
  * Image button with a border progress around it
  * Eg: Download file attachments in Gapo App
  */
-class CircularProgressButton @JvmOverloads constructor(
+internal class CircularProgressButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0

@@ -19,7 +19,7 @@ import androidx.transition.TransitionManager
  * @since 25/07/2021
  * Collapsable Text like Facebook see more text in feeds
  */
-class CollapsableTextView @JvmOverloads constructor(
+internal class CollapsableTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
