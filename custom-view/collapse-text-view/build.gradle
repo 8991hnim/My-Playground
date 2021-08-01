@@ -10,6 +10,8 @@ plugins {
     id 'kotlin-kapt'
 }
 
+apply from: '../../app_flavors.gradle'
+
 android {
     compileSdkVersion Versions.compileSdkVersion
     buildToolsVersion Versions.buildToolsVersion

@@ -10,6 +10,8 @@ plugins {
     id 'kotlin-kapt'
 }
 
+apply from: '../app_flavors.gradle'
+
 android {
     compileSdkVersion Versions.compileSdkVersion
     buildToolsVersion Versions.buildToolsVersion
@@ -26,10 +28,29 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            applicationIdSuffix ".debug"
+        }
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            dimension "version"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        prod {
+            dimension "version"
+            applicationIdSuffix ".prod"
+            versionNameSuffix "-prod"
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -37,6 +58,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -46,7 +68,7 @@ dependencies {
     implementation project(Modules.Features.collapseTextView)
 
     implementation Fundamentals.Kotlin.stdLib
-    
+
     implementation Fundamentals.AndroidX.core
     implementation Fundamentals.AndroidX.appcompat
     implementation Fundamentals.AndroidX.activityKtx

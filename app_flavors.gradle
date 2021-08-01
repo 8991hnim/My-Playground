@@ -1,0 +1,15 @@
+android {
+    flavorDimensions "version"
+
+    productFlavors {
+        dev {
+            isDefault = true
+            dimension "version"
+            buildConfigField("String", "FLAVOR_NAME", "\"dev\"")
+        }
+        prod {
+            dimension "version"
+            buildConfigField("String", "FLAVOR_NAME", "\"prod\"")
+        }
+    }
+}
