@@ -1,6 +1,5 @@
 import dep.Fundamentals
 import dep.Libraries
-import dep.Versions
 
 plugins {
     id 'com.android.library'
@@ -11,15 +10,7 @@ plugins {
 apply from: '../app_flavors.gradle'
 
 android {
-    compileSdkVersion Versions.compileSdkVersion
-    buildToolsVersion Versions.buildToolsVersion
-
     defaultConfig {
-        minSdkVersion Versions.minSdkVersion
-        targetSdkVersion Versions.targetSdkVersion
-        versionCode Versions.Release.versionCode
-        versionName Versions.Release.versionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }

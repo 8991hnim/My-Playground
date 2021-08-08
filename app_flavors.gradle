@@ -1,4 +1,14 @@
+import dep.Versions
+
 android {
+    compileSdkVersion Versions.compileSdkVersion
+    buildToolsVersion Versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion Versions.minSdkVersion
+        targetSdkVersion Versions.targetSdkVersion
+    }
+
     flavorDimensions "version"
 
     productFlavors {

@@ -6,6 +6,7 @@ import android.net.Uri
 import m.tech.navigation.DeepLinkConstants.APP_DEEPLINK_PREFIX
 import m.tech.navigation.DeepLinkConstants.CIRCULAR_PROGRESS_BUTTON
 import m.tech.navigation.DeepLinkConstants.COLLAPSE_TEXT_VIEW
+import m.tech.navigation.DeepLinkConstants.POLYGON_IMAGE_VIEW
 
 internal sealed class DeepLinkManager {
 
@@ -25,6 +26,12 @@ internal sealed class DeepLinkManager {
     object CircularProgressButton : DeepLinkManager() {
         override val link: String
             get() = CIRCULAR_PROGRESS_BUTTON
+
+    }
+
+    object PolygonImageView : DeepLinkManager() {
+        override val link: String
+            get() = POLYGON_IMAGE_VIEW
 
     }
 

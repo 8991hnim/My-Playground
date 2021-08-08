@@ -41,16 +41,23 @@ object Modules {
     object Features {
         const val collapseTextView = ":custom-view:collapse-text-view"
         const val circularProgressButton = ":custom-view:circular-progress-button"
+        const val polygonImageView = ":custom-view:polygon-image-view"
     }
 
 }
 
-object Libraries{
+object Libraries {
 
-    object DeepLink{
+    object DeepLink {
         private const val deeplink_version = "5.4.3"
         const val dispatch = "com.airbnb:deeplinkdispatch:$deeplink_version"
         const val processor = "com.airbnb:deeplinkdispatch-processor:$deeplink_version"
+    }
+
+    object Glide {
+        private const val glide_version = "4.12.0"
+        const val core = "com.github.bumptech.glide:glide:$glide_version"
+        const val processor = "com.github.bumptech.glide:compiler:$glide_version"
     }
 
 }

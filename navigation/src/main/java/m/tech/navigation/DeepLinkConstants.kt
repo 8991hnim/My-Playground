@@ -5,5 +5,6 @@ object DeepLinkConstants {
 
     const val COLLAPSE_TEXT_VIEW = "collapse_text_view"
     const val CIRCULAR_PROGRESS_BUTTON = "circular_progress_button"
+    const val POLYGON_IMAGE_VIEW = "polygon_image_view"
 
 }

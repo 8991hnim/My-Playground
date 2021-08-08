@@ -19,6 +19,12 @@ object DeepLinkNavigation {
                 context.startActivity(this)
             }
         }
+
+        fun navToPolygonImageView(context: Context) {
+            DeepLinkManager.PolygonImageView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
     }
 
 

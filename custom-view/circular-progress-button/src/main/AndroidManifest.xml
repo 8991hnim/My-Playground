@@ -3,7 +3,7 @@
     package="m.tech.circular_progress_button">
 
     <application>
-        <activity android:name=".CircularProgressButtonActivity" />
+        <activity android:name=".CircularProgressButtonActivity"/>
     </application>
 
 </manifest>

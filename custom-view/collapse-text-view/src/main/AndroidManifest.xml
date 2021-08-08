@@ -3,7 +3,7 @@
     package="m.tech.collapse_text_view">
 
     <application>
-        <activity android:name=".CollapseTextViewActivity" />
+        <activity android:name=".CollapseTextViewActivity"/>
     </application>
 
 </manifest>

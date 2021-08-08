@@ -23,4 +23,8 @@ class MainActivity : AppCompatActivity() {
     fun navCollapsableTextView(view: View) {
         DeepLinkNavigation.CustomViewScope.navToCollapseTextView(this)
     }
+
+    fun navPolygonImageView(view: View) {
+        DeepLinkNavigation.CustomViewScope.navToPolygonImageView(this)
+    }
 }

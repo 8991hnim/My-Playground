@@ -20,6 +20,12 @@
             android:text="Collapsable TextView"
             android:onClick="navCollapsableTextView"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Polygon Image View"
+            android:onClick="navPolygonImageView"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.fragment.app.FragmentContainerView

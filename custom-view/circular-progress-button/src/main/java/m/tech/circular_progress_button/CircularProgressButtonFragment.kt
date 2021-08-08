@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_circular_progress_button.*
+import m.tech.navigation.DeepLinkNavigation
 
 /**
  * @author 89hnim
