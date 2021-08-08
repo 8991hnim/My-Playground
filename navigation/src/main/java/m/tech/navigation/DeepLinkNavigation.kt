@@ -2,6 +2,10 @@ package m.tech.navigation
 
 import android.content.Context
 
+/**
+ * @author 89hnim
+ * @since 31/07/2021
+ */
 object DeepLinkNavigation {
 
     /**

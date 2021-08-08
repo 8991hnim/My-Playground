@@ -1,5 +1,9 @@
 package m.tech.navigation
 
+/**
+ * @author 89hnim
+ * @since 31/07/2021
+ */
 object DeepLinkConstants {
     internal const val APP_DEEPLINK_PREFIX = "app"
 

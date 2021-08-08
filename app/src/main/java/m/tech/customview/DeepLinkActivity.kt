@@ -11,6 +11,10 @@ import m.tech.collapse_text_view.CollapseTextViewDeepLinkModuleRegistry
 import m.tech.polygon_image_view.PolygonImageViewDeepLinkModule
 import m.tech.polygon_image_view.PolygonImageViewDeepLinkModuleRegistry
 
+/**
+ * @author 89hnim
+ * @since 31/07/2021
+ */
 @DeepLinkHandler(value = [
     AppDeepLinkModule::class,
     CircularProgressButtonDeepLinkModule::class,

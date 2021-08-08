@@ -1,5 +1,9 @@
 package dep
 
+/**
+ * @author 89hnim
+ * @since 29/07/2021
+ */
 object Versions {
     const val compileSdkVersion = 30
     const val buildToolsVersion = "30.0.3"

@@ -17,7 +17,7 @@ import androidx.transition.TransitionManager
 /**
  * @author 89hnim
  * @since 25/07/2021
- * Collapsable Text like Facebook see more text in feeds
+ * Collapsable Text like see more text in feeds Facebook
  */
 internal class CollapsableTextView @JvmOverloads constructor(
     context: Context,

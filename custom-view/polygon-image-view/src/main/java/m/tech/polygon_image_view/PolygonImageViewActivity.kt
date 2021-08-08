@@ -6,6 +6,10 @@ import androidx.fragment.app.commit
 import m.tech.navigation.AppDeepLink
 import m.tech.navigation.DeepLinkConstants.POLYGON_IMAGE_VIEW
 
+/**
+ * @author 89hnim
+ * @since 08/08/2021
+ */
 @AppDeepLink(POLYGON_IMAGE_VIEW)
 internal class PolygonImageViewActivity : AppCompatActivity() {
 

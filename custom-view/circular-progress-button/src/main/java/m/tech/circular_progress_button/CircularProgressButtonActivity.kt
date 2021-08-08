@@ -6,6 +6,10 @@ import androidx.fragment.app.commit
 import m.tech.navigation.AppDeepLink
 import m.tech.navigation.DeepLinkConstants.CIRCULAR_PROGRESS_BUTTON
 
+/**
+ * @author 89hnim
+ * @since 31/07/2021
+ */
 @AppDeepLink(CIRCULAR_PROGRESS_BUTTON)
 internal class CircularProgressButtonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

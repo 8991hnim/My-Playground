@@ -19,6 +19,7 @@ import com.bumptech.glide.request.transition.Transition
  * @since 08/08/2021
  * A bitmap wrapped in a polygon
  * You can change the drawable [R.drawable.ic_polygon] with any other shapes you want to wrap the bitmap.
+ * eg: try [R.drawable.shape_circle]
  */
 internal class PolygonImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

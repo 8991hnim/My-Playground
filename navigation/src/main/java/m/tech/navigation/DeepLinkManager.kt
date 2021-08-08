@@ -8,6 +8,10 @@ import m.tech.navigation.DeepLinkConstants.CIRCULAR_PROGRESS_BUTTON
 import m.tech.navigation.DeepLinkConstants.COLLAPSE_TEXT_VIEW
 import m.tech.navigation.DeepLinkConstants.POLYGON_IMAGE_VIEW
 
+/**
+ * @author 89hnim
+ * @since 31/07/2021
+ */
 internal sealed class DeepLinkManager {
 
     abstract val link: String
