@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/switch_calendar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+        app:tint="#000" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_week"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="3dp"
+        android:background="#FFFFFF"
+        android:elevation="3dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sun"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mon"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tue"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/wed"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/thu"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fri"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sat"
+            android:textColor="#D8D8D8"
+            android:textSize="12sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:max_year="2022"
+        app:min_year="2020"
+        android:paddingHorizontal="12dp"
+        app:month_view="m.tech.calendar_view.view.CustomMonthView"
+        app:month_view_show_mode="mode_fix"
+        app:week_background="#fff"
+        app:week_start_with="mon" />
+
+<!--        <com.haibin.calendarview.CalendarView-->
+<!--            android:id="@+id/calendarView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#fff"-->
+<!--            app:calendar_height="52dp"-->
+<!--            app:current_month_lunar_text_color="#CFCFCF"-->
+<!--            app:current_month_text_color="#333333"-->
+<!--            app:day_text_size="14sp"-->
+<!--            app:max_select_range="-1"-->
+<!--            app:max_year="2022"-->
+<!--            app:min_select_range="-1"-->
+<!--            app:min_year="2020"-->
+<!--            app:month_view="m.tech.calendar_view.view.CustomMonthView"-->
+<!--            app:month_view_show_mode="mode_fix"-->
+<!--            app:other_month_lunar_text_color="#e1e1e1"-->
+<!--            app:other_month_text_color="#e1e1e1"-->
+<!--            app:scheme_text="假"-->
+<!--            app:scheme_text_color="#333"-->
+<!--            app:scheme_theme_color="#128c4b"-->
+<!--            app:selected_lunar_text_color="#CFCFCF"-->
+<!--            app:selected_text_color="#FFFFFF"-->
+<!--            app:selected_theme_color="#FFf54a00"-->
+<!--            app:week_background="#fff"-->
+<!--            app:week_text_color="#111111"-->
+<!--            app:year_view_day_text_color="#333333"-->
+<!--            app:year_view_day_text_size="9sp"-->
+<!--            app:year_view_month_text_color="#ff0000"-->
+<!--            app:year_view_month_text_size="20sp"-->
+<!--            app:year_view_scheme_color="#f17706" />-->
+</androidx.appcompat.widget.LinearLayoutCompat>

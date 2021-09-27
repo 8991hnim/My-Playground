@@ -29,6 +29,24 @@ object DeepLinkNavigation {
                 context.startActivity(this)
             }
         }
+
+        fun navToCalendarView(context: Context) {
+            DeepLinkManager.CalendarView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
+
+        fun navToPolygonProgressView(context: Context) {
+            DeepLinkManager.PolygonProgressView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
+
+        fun navToTreeView(context: Context){
+            DeepLinkManager.TreeView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
     }
 
 

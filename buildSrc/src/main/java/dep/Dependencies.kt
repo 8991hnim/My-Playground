@@ -46,6 +46,13 @@ object Modules {
         const val collapseTextView = ":custom-view:collapse-text-view"
         const val circularProgressButton = ":custom-view:circular-progress-button"
         const val polygonImageView = ":custom-view:polygon-image-view"
+        const val calendarView = ":custom-view:calendar-view"
+        const val polygonProgressView = ":custom-view:polygon-progress-view"
+        const val treeView = ":custom-view:tree-view"
+    }
+
+    object Libraries {
+        const val haibinCalendarView = ":library:haibincalendarview"
     }
 
 }
@@ -63,5 +70,17 @@ object Libraries {
         const val core = "com.github.bumptech.glide:glide:$glide_version"
         const val processor = "com.github.bumptech.glide:compiler:$glide_version"
     }
+
+    object Coroutines {
+        private const val version = "1.5.2"
+        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+    }
+
+    private const val calendar_view_version = "3.7.1"
+    const val calendarView = "com.haibin:calendarview:$calendar_view_version"
+
+    private const val recycler_view = "1.2.1"
+    const val recyclerView = "androidx.recyclerview:recyclerview:$recycler_view"
+
 
 }

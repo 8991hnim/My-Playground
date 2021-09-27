@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="custom_week_string_array">
+        <item>Sun1</item>
+        <item>Mon2</item>
+        <item>Tue3</item>
+        <item>Wed4</item>
+        <item>Thu5</item>
+        <item>Fri6</item>
+        <item>Sat7</item>
+    </string-array>
+</resources>

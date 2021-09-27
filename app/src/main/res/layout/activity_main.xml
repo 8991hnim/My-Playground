@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <Button
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:onClick="navCircularProgressButton"
+        android:text="Circular Progress Button" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Circular Progress Button"
-            android:onClick="navCircularProgressButton"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navCollapsableTextView"
+        android:text="Collapsable TextView" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Collapsable TextView"
-            android:onClick="navCollapsableTextView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navPolygonImageView"
+        android:text="Polygon Image View" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Polygon Image View"
-            android:onClick="navPolygonImageView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navCalendarView"
+        android:text="Calendar View" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navPolygonProgressView"
+        android:text="Polygon Progress View" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navTreeView"
+        android:text="Tree View" />
+
+    <m.tech.tree_view.TreeView
+        android:id="@+id/tree_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

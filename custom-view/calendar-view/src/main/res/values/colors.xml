@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#ffe6f2</color>
+    <color name="week_bar_color">#000</color>
+    <color name="gray_opa">#1A8B8B8B</color>
+    <color name="period_corner">#FF3232</color>
+    <color name="period_circle">#FFE5E5</color>
+    <color name="period_dash">#FF6363</color>
+    <color name="ovulation_corner">#8F53FB</color>
+    <color name="ovulation_circle">#ECE2FD</color>
+    <color name="ovulation_dash">#A87DF3</color>
+    <color name="easy_pregnant">#8039FF</color>
+</resources>

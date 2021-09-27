@@ -67,6 +67,9 @@ dependencies {
     implementation project(Modules.Features.circularProgressButton)
     implementation project(Modules.Features.collapseTextView)
     implementation project(Modules.Features.polygonImageView)
+    implementation project(Modules.Features.calendarView)
+    implementation project(Modules.Features.polygonProgressView)
+    implementation project(Modules.Features.treeView)
 
     implementation Fundamentals.Kotlin.stdLib
 

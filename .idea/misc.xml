@@ -4,11 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/app/src/main/res/layout/activity_main.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/app/src/main/res/layout/item_node_main.xml" value="0.3546875" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/drawable/ic_dot.xml" value="0.37083333333333335" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/drawable/ic_heart.xml" value="0.37083333333333335" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/drawable/ic_note.xml" value="0.37083333333333335" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/activity_calendar_view.xml" value="0.3278985507246377" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/english_week_bar.xml" value="0.3070652173913043" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/fragment_calendar_month_view.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/fragment_calendar_view.xml" value="0.3278985507246377" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/fragment_calendar_week_view.xml" value="0.25" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/calendar-view/src/main/res/layout/layout_week_bar.xml" value="0.2821557971014493" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/circular-progress-button/src/main/res/layout/activity_circular_progress_button.xml" value="0.21240942028985507" />
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/collapse-text-view/src/main/res/layout/activity_collapse_text_view.xml" value="0.15896739130434784" />
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-image-view/src/main/res/drawable/ic_polygon.xml" value="0.36512820512820515" />
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-image-view/src/main/res/drawable/shape_circle.xml" value="0.36512820512820515" />
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-image-view/src/main/res/layout/activity_polygon_image_view.xml" value="0.19791666666666666" />
         <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-image-view/src/main/res/layout/fragment_polygon_image_view.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-progress-view/src/main/res/layout/activity_polygon_progress_view.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/polygon-progress-view/src/main/res/layout/fragment_polygon_progress_view.xml" value="0.72" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/tree-view/src/main/res/layout/activity_tree_view.xml" value="0.19791666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/tree-view/src/main/res/layout/fragment_tree_view.xml" value="0.19791666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/custom-view/tree-view/src/main/res/layout/item_node.xml" value="0.3546875" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/library/haibincalendarview/src/main/res/layout/cv_layout_calendar_recycleview.xml" value="0.30117753623188404" />
+        <entry key="..\:/Android/AndroidStudioProjects/CodingWithHnim/CustomView/library/haibincalendarview/src/main/res/layout/cv_week_bar.xml" value="0.30117753623188404" />
       </map>
     </option>
   </component>
@@ -17,5 +35,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.536" />
+      </ProjectState>
+    </option>
   </component>
 </project>

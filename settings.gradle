@@ -6,3 +6,8 @@ include ':navigation'
 include ':custom-view:circular-progress-button'
 include ':custom-view:collapse-text-view'
 include ':custom-view:polygon-image-view'
+include ':custom-view:calendar-view'
+include ':custom-view:polygon-progress-view'
+include ':custom-view:tree-view'
+
+include ':library:haibincalendarview'

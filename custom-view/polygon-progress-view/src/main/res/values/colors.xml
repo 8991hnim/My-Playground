@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_polygon">#ffebf2</color>
+    <color name="second_polygon">#80FFFFFF</color>
+    <color name="anim_color">#E6FFFFFF</color>
+    <color name="circle_color">#ea7eae</color>
+
+    <color name="divider_gradient_start_color">#f4dae7</color>
+    <color name="divider_gradient_center_color">#f3bbd7</color>
+    <color name="divider_gradient_end_color">#ea7eae</color>
+
+    <color name="anim_divider_gradient_start_color">#FFFFFF</color>
+    <color name="anim_divider_gradient_center_color">#E6FFFFFF</color>
+    <color name="anim_divider_gradient_end_color">#CCFFFFFF</color>
+
+</resources>

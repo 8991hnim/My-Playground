@@ -14,9 +14,14 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/custom-view" />
+            <option value="$PROJECT_DIR$/custom-view/calendar-view" />
             <option value="$PROJECT_DIR$/custom-view/circular-progress-button" />
             <option value="$PROJECT_DIR$/custom-view/collapse-text-view" />
             <option value="$PROJECT_DIR$/custom-view/polygon-image-view" />
+            <option value="$PROJECT_DIR$/custom-view/polygon-progress-view" />
+            <option value="$PROJECT_DIR$/custom-view/tree-view" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/haibincalendarview" />
             <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/test-repo" />
           </set>
