@@ -1,7 +1,6 @@
 package m.tech.tree_view
 
 import m.tech.tree_view.treeview.NodeData
-import java.util.*
 
 data class SampleModelV2(
     val id: String,
@@ -46,5 +45,15 @@ data class SampleModelV2(
             SampleModelV2("ID_3", "Sample 3", emptyList()),
             SampleModelV2("ID_4", "Sample $", emptyList()),
         )
+    }
+
+    override fun areItemsTheSame(item: NodeData<SampleModelV2>): Boolean {
+        return if (item !is SampleModelV2) false
+        else id == item.id
+    }
+
+    override fun areContentsTheSame(item: NodeData<SampleModelV2>): Boolean {
+        return if (item !is SampleModelV2) false
+        else item.name == name && item.child.size == child.size
     }
 }

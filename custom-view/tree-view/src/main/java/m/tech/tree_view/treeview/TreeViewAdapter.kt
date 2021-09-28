@@ -1,13 +1,11 @@
-package m.tech.tree_view
+package m.tech.tree_view.treeview
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import m.tech.tree_view.treeview.NodeViewDataV2
-import m.tech.tree_view.treeview.TreeViewManager
+import m.tech.tree_view.R
 
 /**
  * @author minhta
@@ -16,8 +14,7 @@ import m.tech.tree_view.treeview.TreeViewManager
 internal class TreeViewAdapter<T>(
     private val layoutRes: Int,
     private val isSupportMargin: Boolean,
-//    private val onBind: (holder: View, position: Int, item: NodeViewDataV2<T>, data: T) -> Unit,
-    private val listener: TreeViewManager.Listener<T>
+    private val listener: TreeView.Listener<T>
 ) : ListAdapter<NodeViewDataV2<T>, TreeViewAdapter.NodeHolder<T>>(NodeViewDataV2.DiffCallback()) {
 
 //    init {
@@ -40,7 +37,7 @@ internal class TreeViewAdapter<T>(
     internal class NodeHolder<T>(
         itemView: View,
         private val isSupportMargin: Boolean,
-        private  val listener: TreeViewManager.Listener<T>,
+        private val listener: TreeView.Listener<T>,
     ) : RecyclerView.ViewHolder(itemView) {
 
         private val space = itemView.context.resources.getDimension(R.dimen.space)
