@@ -47,7 +47,7 @@ class TreeViewFragment : Fragment(R.layout.fragment_tree_view) {
 
         tree_view.initialize(
             itemLayoutRes = R.layout.item_node,
-            nodes = getNodes(),
+            nodes = SampleModelV2.getList(),
             isSupportMargin = true,
             showAllNodes = false,
             onBind = { view, position, item ->

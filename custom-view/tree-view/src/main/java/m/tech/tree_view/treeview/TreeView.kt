@@ -31,7 +31,7 @@ class TreeView @JvmOverloads constructor(
 
     fun initialize(
         @LayoutRes itemLayoutRes: Int,
-        nodes: List<NodeViewData>,
+        nodes: List<NodeData<*>>,
         showAllNodes: Boolean,
         isSupportMargin: Boolean,
         onBind: (view: View, position: Int, item: NodeViewData) -> Unit,
@@ -40,31 +40,69 @@ class TreeView @JvmOverloads constructor(
         this.onNodeSelected = onNodeSelected
 
         //prepare data
-        nodes.forEach {
-            it.nodeLevel = findNodeLevel(it)
-            it.isLeaf = isLeaf(nodes, it)
-            it.isExpanded = showAllNodes
-        }
-        nodes.forEach {
-            Log.d("icdd", "initialize: ${it.toReadableString()}")
-        }
+//        nodes.forEach {
+//            it.nodeLevel = findNodeLevel(it)
+//            it.isLeaf = isLeaf(nodes, it)
+//            it.isExpanded = showAllNodes
+//        }
+//        nodes.forEach {
+//            Log.d("icdd", "initialize: ${it.toReadableString()}")
+//        }
+//
+//        this@TreeView.nodes.clear()
+//        this@TreeView.nodes.addAll(nodes)
+//        this@TreeView.nodesShowOnUI.clear()
+//        this@TreeView.nodesShowOnUI.addAll(
+//            nodes.filter { it.nodeLevel == 0 }
+//        )
+//
+//        //prepare UI
+//        layoutManager = LinearLayoutManager(context)
+//        adapter = TreeViewAdapter(itemLayoutRes, isSupportMargin, onBind).also {
+//            this@TreeView.treeViewAdapter = it
+//        }
+//
+//        //update UI
+//        requestUpdateTree()
 
-        this@TreeView.nodes.clear()
-        this@TreeView.nodes.addAll(nodes)
-        this@TreeView.nodesShowOnUI.clear()
-        this@TreeView.nodesShowOnUI.addAll(
-            nodes.filter { it.nodeLevel == 0 }
-        )
-
-        //prepare UI
-        layoutManager = LinearLayoutManager(context)
-        adapter = TreeViewAdapter(itemLayoutRes, isSupportMargin, onBind).also {
-            this@TreeView.treeViewAdapter = it
+        val result = mutableListOf<NodeViewDataV2>()
+        result.addAll(recursiveGetDepartmentChild(emptyList(), nodes).orEmpty())
+        result.forEach {
+            Log.d("icdddddd", "initialize: $it")
         }
-
-        //update UI
-        requestUpdateTree()
     }
+
+    private fun recursiveGetDepartmentChild(
+        parentIds: List<String>,
+        listChild: List<NodeData<*>>?
+    ): List<NodeViewDataV2>? {
+        if (listChild == null || listChild.isEmpty()) return null
+        val result = ArrayList<NodeViewDataV2>()
+        listChild.forEach {
+            val internalParentIds = arrayListOf<String>()
+            internalParentIds.addAll(parentIds)
+            internalParentIds.add(it.nodeViewId)
+            result.add(
+                NodeViewDataV2(
+                    nodeId = it.nodeViewId,
+                    parentNodeIds = parentIds.toMutableList(),
+                    isExpanded = false,
+                    nodeState = null,
+                    nodeLevel = 0,
+                    isLeaf = false,
+                    isSelected = false
+                )
+            )
+            result.addAll(
+                recursiveGetDepartmentChild(
+                    internalParentIds.toMutableList(),
+                    it.getNodeChild()
+                ).orEmpty()
+            )
+        }
+        return result
+    }
+
 
     fun expandNode(nodeId: String) {
         val parentNodeIndex = nodesShowOnUI.indexOfFirst { it.nodeId == nodeId }
