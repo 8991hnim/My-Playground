@@ -2,14 +2,8 @@ package m.tech.customview
 
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.launch
 import m.tech.navigation.DeepLinkNavigation
-import m.tech.tree_view.SampleModel
-import m.tech.tree_view.TreeViewFragment.Companion.getNodes
 
 /**
  * @author 89hnim
