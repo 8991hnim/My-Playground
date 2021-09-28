@@ -41,7 +41,7 @@
         android:onClick="navTreeView"
         android:text="Tree View" />
 
-    <m.tech.tree_view.TreeView
+    <m.tech.tree_view.treeview.TreeView
         android:id="@+id/tree_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -20,18 +20,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        lifecycleScope.launch {
-            tree_view.initialize(
-                itemLayoutRes = R.layout.item_node_main,
-                nodes = getNodes(),
-                showAllNodes = false,
-                onBind = { view,  position, item ->
-                    val myItem = (item as? SampleModel) ?: return@initialize
-                    view.findViewById<TextView>(m.tech.tree_view.R.id.node_name).text = myItem.name
-                }
-            )
-        }
     }
 
     fun navCircularProgressButton(view: View) {

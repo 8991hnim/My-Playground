@@ -23,7 +23,6 @@
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/haibincalendarview" />
             <option value="$PROJECT_DIR$/navigation" />
-            <option value="$PROJECT_DIR$/test-repo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

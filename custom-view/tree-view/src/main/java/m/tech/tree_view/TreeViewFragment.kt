@@ -1,12 +1,16 @@
 package m.tech.tree_view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.RadioButton
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.android.synthetic.main.fragment_tree_view.*
 import kotlinx.coroutines.launch
+import m.tech.tree_view.model.NodeState
 import java.util.*
 
 /**
@@ -15,26 +19,80 @@ import java.util.*
  */
 class TreeViewFragment : Fragment(R.layout.fragment_tree_view) {
 
+    object NodeStateSelected : NodeState()
+
+    abstract class A {
+        abstract val id: String
+        var isChecked: Boolean = false
+
+        abstract fun shallowCopy(): A
+    }
+
+    data class B(override val id: String) : A(){
+        override fun shallowCopy(): B {
+            return B(id).apply {
+                this@B.isChecked = isChecked
+            }
+        }
+
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launch {
-            tree_view.initialize(
-                itemLayoutRes = R.layout.item_node,
-                nodes = getNodes(),
-                showAllNodes = false,
-                onBind = { view, position, item ->
-                    val myItem = (item as? SampleModel) ?: return@initialize
-                    view.findViewById<TextView>(R.id.node_name).text = myItem.name
-                    view.setOnClickListener {
-                        if (myItem.isExpanded) {
-                            tree_view.collapseNode(myItem.nodeId)
-                        } else {
-                            tree_view.expandNode(myItem.nodeId)
-                        }
+        val b = B("ID")
+        b.isChecked = true
+        Log.d("icd2", "onViewCreated: ${b.isChecked}")
+        Log.d("icd2", "onViewCreated: ${b.shallowCopy().isChecked}")
+
+        tree_view.initialize(
+            itemLayoutRes = R.layout.item_node,
+            nodes = getNodes(),
+            isSupportMargin = true,
+            showAllNodes = false,
+            onBind = { view, position, item ->
+                val myItem = (item as? SampleModel) ?: return@initialize
+                val ivArrow = view.findViewById<AppCompatImageView>(R.id.iv_arrow)
+                val rbCheck = view.findViewById<RadioButton>(R.id.rb_check)
+                val tvNode = view.findViewById<TextView>(R.id.node_name)
+
+                tvNode.text = myItem.name
+                if (myItem.isLeaf) {
+                    ivArrow.visibility = View.INVISIBLE
+                } else {
+                    ivArrow.visibility = View.VISIBLE
+                }
+
+                ivArrow.rotation = 0f
+                val rotateDegree = if (myItem.isExpanded) 90f else 0f
+                ivArrow.animate().rotationBy(rotateDegree).start()
+
+                rbCheck.isChecked = myItem.isSelected
+
+                rbCheck.setOnClickListener {
+                    tree_view.selectNode(
+                        item.nodeId,
+                        !item.isSelected
+                    ) //will trigger onNodeSelected
+                }
+
+                ivArrow.setOnClickListener {
+                    if (myItem.isExpanded) {
+                        tree_view.collapseNode(myItem.nodeId)
+                    } else {
+                        tree_view.expandNode(myItem.nodeId)
                     }
                 }
-            )
+            }, onNodeSelected = { node, child, isSelected ->
+                tree_view.setSelectedNode(arrayListOf(node).apply { addAll(child) }, isSelected)
+                tree_view.requestUpdateTree()
+            })
+
+        btn_result.setOnClickListener {
+            val list = tree_view.getSelectedNodes()
+            list.forEach {
+                Log.d("icd", "onViewCreated: ${(it as SampleModel).name}")
+            }
         }
     }
 
@@ -49,14 +107,14 @@ class TreeViewFragment : Fragment(R.layout.fragment_tree_view) {
             return mutableListOf(
                 SampleModel(
                     parentId1,
-                    null,
+                    emptyList(),
                     "sample_1",
                     "Sample 1: Sample Node Root",
                     false
                 ),
                 SampleModel(
                     parentId2,
-                    null,
+                    emptyList(),
                     "sample_2",
                     "Sample 2: Sample Node Root",
                     false
@@ -77,7 +135,7 @@ class TreeViewFragment : Fragment(R.layout.fragment_tree_view) {
                 ),
                 SampleModel(
                     parentId5,
-                    null,
+                    emptyList(),
                     "sample_5",
                     "Sample 5: Sample Node Root Has No Child",
                     false

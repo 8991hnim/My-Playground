@@ -1,5 +1,5 @@
 package m.tech.tree_view.model
 
-sealed class NodeState
+abstract class NodeState
 
 object NodeStateIdle: NodeState()

@@ -1,6 +1,6 @@
 rootProject.name = "CustomView"
 include ':app'
-include ':test-repo' //remote repo
+//include ':test-repo' //remote repo
 include ':navigation'
 
 include ':custom-view:circular-progress-button'

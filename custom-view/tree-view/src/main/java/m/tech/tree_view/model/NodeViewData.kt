@@ -11,13 +11,17 @@ abstract class NodeViewData {
 
     abstract val nodeId: String
 
-    abstract val parentNodeIds: List<String>?
+    abstract val parentNodeIds: List<String>
 
-    var nodeState: NodeState? = null
+    abstract var isExpanded: Boolean
 
-   abstract var isExpanded: Boolean
+    abstract var nodeState: NodeState?
 
-    internal var nodeLevel: Int = 0
+    abstract var nodeLevel: Int
+
+    abstract var isLeaf: Boolean
+
+    abstract var isSelected: Boolean
 
     internal val hashCode: Int
         get() = nodeId.hashCode() + parentNodeIds.hashCode()
@@ -33,7 +37,10 @@ abstract class NodeViewData {
     }
 
     private fun internalAreContentsTheSame(item: NodeViewData): Boolean {
-        return isExpanded == item.isExpanded && nodeState == item.nodeState && nodeLevel == item.nodeLevel
+        return isExpanded == item.isExpanded
+                && nodeState == item.nodeState
+                && nodeLevel == item.nodeLevel
+                && isSelected == item.isSelected
     }
 
     internal object DiffCallback : DiffUtil.ItemCallback<NodeViewData>() {
@@ -52,20 +59,8 @@ abstract class NodeViewData {
         }
     }
 
-    internal class LiveData : MutableLiveData<List<NodeViewData>>() {
-
-        override fun setValue(value: List<NodeViewData>) {
-            super.setValue(value.map { it.shallowCopy() })
-        }
-
-        override fun postValue(value: List<NodeViewData>) {
-            super.postValue(value.map { it.shallowCopy() })
-        }
-
-    }
-
     internal fun toReadableString(): String {
-        return "Node $nodeId: Child $parentNodeIds - NoteLevel: $nodeLevel - State $nodeState - Expanded $isExpanded"
+        return "Node $nodeId: - NoteLevel: $nodeLevel - State $nodeState - Expanded $isExpanded - isSelected $isSelected - Parent $parentNodeIds "
     }
 
 }

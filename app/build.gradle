@@ -62,7 +62,7 @@ android {
 }
 
 dependencies {
-    implementation project(Modules.testRepo)
+//    implementation project(Modules.testRepo)
     implementation project(Modules.navigation)
     implementation project(Modules.Features.circularProgressButton)
     implementation project(Modules.Features.collapseTextView)
