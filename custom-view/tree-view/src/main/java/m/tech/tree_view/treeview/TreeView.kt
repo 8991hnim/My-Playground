@@ -2,6 +2,7 @@ package m.tech.tree_view.treeview
 
 import android.view.View
 import androidx.annotation.LayoutRes
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.math.max
@@ -36,7 +37,8 @@ class TreeView<T> {
         nodes: List<NodeData<T>>,
         showAllNodes: Boolean,
         isSupportMargin: Boolean,
-        listener: Listener<T>
+        listener: Listener<T>,
+        vararg adapters: RecyclerView.Adapter<*> = emptyArray()
     ) {
         this.listener = listener
 
@@ -62,9 +64,14 @@ class TreeView<T> {
         //prepare UI
         with(recyclerView) {
             layoutManager = LinearLayoutManager(context)
-            adapter = TreeViewAdapter(itemLayoutRes, isSupportMargin, listener).also {
-                this@TreeView.treeViewAdapter = it
-            }
+            adapter = ConcatAdapter(
+                listOf(
+                    *adapters,
+                    TreeViewAdapter(itemLayoutRes, isSupportMargin, listener).also {
+                        this@TreeView.treeViewAdapter = it
+                    }
+                )
+            )
         }
 
         //update UI

@@ -51,5 +51,6 @@ dependencies {
     kapt Libraries.DeepLink.processor
 
     implementation Libraries.Coroutines.core
+    implementation Libraries.recyclerView
 
 }

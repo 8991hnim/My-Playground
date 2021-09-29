@@ -47,7 +47,12 @@ internal class TreeViewAdapter<T>(
                 listener.onBind(this, adapterPosition, item, item.data as T)
                 if (isSupportMargin) {
                     val margin = space * item.nodeLevel
-                    itemView.setPadding(margin.toInt(), 0, 0, 0)
+                    itemView.setPadding(
+                        margin.toInt(),
+                        itemView.paddingTop,
+                        itemView.paddingRight,
+                        itemView.paddingBottom
+                    )
                 }
             }
     }
