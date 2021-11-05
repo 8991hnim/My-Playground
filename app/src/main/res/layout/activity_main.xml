@@ -41,9 +41,10 @@
         android:onClick="navTreeView"
         android:text="Tree View" />
 
-    <m.tech.tree_view.treeview.TreeView
-        android:id="@+id/tree_view"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:onClick="navOtpView"
+        android:text="Otp View" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

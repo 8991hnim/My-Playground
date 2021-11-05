@@ -49,6 +49,7 @@ object Modules {
         const val calendarView = ":custom-view:calendar-view"
         const val polygonProgressView = ":custom-view:polygon-progress-view"
         const val treeView = ":custom-view:tree-view"
+        const val otpView = ":custom-view:otp-view"
     }
 
     object Libraries {
@@ -82,5 +83,6 @@ object Libraries {
     private const val recycler_view = "1.2.1"
     const val recyclerView = "androidx.recyclerview:recyclerview:$recycler_view"
 
+    const val autoDimens = "com.github.hantrungkien:AutoDimension:1.0.9"
 
 }

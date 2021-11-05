@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="otp_rectangle_space">@dimen/_12dp</dimen>
+    <dimen name="otp_rectangle_radius">@dimen/_6dp</dimen>
+</resources>

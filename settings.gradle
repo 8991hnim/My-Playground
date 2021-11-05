@@ -9,5 +9,6 @@ include ':custom-view:polygon-image-view'
 include ':custom-view:calendar-view'
 include ':custom-view:polygon-progress-view'
 include ':custom-view:tree-view'
+include ':custom-view:otp-view'
 
 include ':library:haibincalendarview'

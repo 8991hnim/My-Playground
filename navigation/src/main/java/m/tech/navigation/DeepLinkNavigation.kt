@@ -47,6 +47,12 @@ object DeepLinkNavigation {
                 context.startActivity(this)
             }
         }
+
+        fun navToOtpView(context: Context){
+            DeepLinkManager.OtpView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
     }
 
 

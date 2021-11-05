@@ -46,4 +46,8 @@ class MainActivity : AppCompatActivity() {
         DeepLinkNavigation.CustomViewScope.navToTreeView(this)
     }
 
+    fun navOtpView(view: View) {
+        DeepLinkNavigation.CustomViewScope.navToOtpView(this)
+    }
+
 }

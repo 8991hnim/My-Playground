@@ -4,6 +4,8 @@ import android.app.Activity
 import android.os.Bundle
 import com.airbnb.deeplinkdispatch.BaseDeepLinkDelegate
 import com.airbnb.deeplinkdispatch.DeepLinkHandler
+import com.gapo.otp_view.OtpViewDeepLinkModule
+import com.gapo.otp_view.OtpViewDeepLinkModuleRegistry
 import m.tech.calendar_view.CalendarViewDeepLinkModule
 import m.tech.calendar_view.CalendarViewDeepLinkModuleRegistry
 import m.tech.circular_progress_button.CircularProgressButtonDeepLinkModule
@@ -30,6 +32,7 @@ import m.tech.tree_view.TreeViewDeepLinkModuleRegistry
         CalendarViewDeepLinkModule::class,
         PolygonProgressViewDeepLinkModule::class,
         TreeViewDeepLinkModule::class,
+        OtpViewDeepLinkModule::class,
     ]
 )
 class DeepLinkActivity : Activity() {
@@ -46,6 +49,7 @@ class DeepLinkActivity : Activity() {
                 CalendarViewDeepLinkModuleRegistry(),
                 PolygonProgressViewDeepLinkModuleRegistry(),
                 TreeViewDeepLinkModuleRegistry(),
+                OtpViewDeepLinkModuleRegistry()
             )
         )
 

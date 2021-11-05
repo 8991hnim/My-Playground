@@ -70,6 +70,7 @@ dependencies {
     implementation project(Modules.Features.calendarView)
     implementation project(Modules.Features.polygonProgressView)
     implementation project(Modules.Features.treeView)
+    implementation project(Modules.Features.otpView)
 
     implementation Fundamentals.Kotlin.stdLib
 

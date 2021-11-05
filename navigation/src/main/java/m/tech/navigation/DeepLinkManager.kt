@@ -8,6 +8,7 @@ import m.tech.navigation.DeepLinkConstants.APP_DEEPLINK_PREFIX
 import m.tech.navigation.DeepLinkConstants.CALENDAR_VIEW
 import m.tech.navigation.DeepLinkConstants.CIRCULAR_PROGRESS_BUTTON
 import m.tech.navigation.DeepLinkConstants.COLLAPSE_TEXT_VIEW
+import m.tech.navigation.DeepLinkConstants.OTP_VIEW
 import m.tech.navigation.DeepLinkConstants.POLYGON_IMAGE_VIEW
 import m.tech.navigation.DeepLinkConstants.POLYGON_PROGRESS_VIEW
 import m.tech.navigation.DeepLinkConstants.TREE_VIEW
@@ -53,6 +54,11 @@ internal sealed class DeepLinkManager {
     object TreeView : DeepLinkManager() {
         override val link: String
             get() = TREE_VIEW
+    }
+
+    object OtpView : DeepLinkManager() {
+        override val link: String
+            get() = OTP_VIEW
     }
 
 }
