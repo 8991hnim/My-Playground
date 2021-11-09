@@ -17,7 +17,7 @@ internal class OtpView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : AppCompatEditText(context, attrs) {
 
-    // max OTP char = 8
+    // max OTP char = 6
     private val maxChar = 6
 
     // in my case, I use W / H = 44 / 56
