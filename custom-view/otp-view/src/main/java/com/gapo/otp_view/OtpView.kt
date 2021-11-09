@@ -18,10 +18,10 @@ internal class OtpView @JvmOverloads constructor(
 ) : AppCompatEditText(context, attrs) {
 
     // max OTP char = 8
-    private val maxChar = 8
+    private val maxChar = 6
 
     // in my case, I use W / H = 44 / 56
-    private val rectWidthHeightRatio = 56f / 44f
+    private val rectWidthHeightRatio = 44f / 56f
 
     // space between rect
     private val space = context.resources.getDimension(R.dimen.otp_rectangle_space)
@@ -53,10 +53,14 @@ internal class OtpView @JvmOverloads constructor(
         }
     }
 
-    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
-        super.onLayout(changed, left, top, right, bottom)
-        rectWidth = (width - paddingRight - paddingLeft - space * (maxChar - 1)) / maxChar
-        rectHeight = rectWidth * rectWidthHeightRatio
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        val widthSize = MeasureSpec.getSize(widthMeasureSpec)
+
+        rectWidth = (widthSize - paddingRight - paddingLeft - space * (maxChar - 1)) / maxChar
+        rectHeight = rectWidth / rectWidthHeightRatio
+
+        setMeasuredDimension(widthSize, rectHeight.toInt())
     }
 
     override fun onDraw(canvas: Canvas?) {
