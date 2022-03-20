@@ -93,17 +93,16 @@ internal class SpeedBarView @JvmOverloads constructor(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-
-        // setup circle start X
-        circleX = (defaultLineIndex - 1) * (lineWidth + spaceBetweenLines) + paddingLeft + lineWidth
-        getSpeedFromX(circleX)
-
         val widthSize = MeasureSpec.getSize(widthMeasureSpec)
 
         // calculate space between two lines
         val totalLinesWidth = linesNumber * lineWidth
         spaceBetweenLines =
             (widthSize - paddingLeft - paddingRight - totalLinesWidth) / (linesNumber - 1)
+
+        // setup circle start X
+        circleX = (defaultLineIndex - 1) * (lineWidth + spaceBetweenLines) + paddingLeft + lineWidth
+        getSpeedFromX(circleX)
 
         /** calculate bottom text height */
         textPaint.getTextBounds("0.1x", 0, "0.1x".length, boundOfText)
