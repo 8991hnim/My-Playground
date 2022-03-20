@@ -10,5 +10,6 @@ include ':custom-view:calendar-view'
 include ':custom-view:polygon-progress-view'
 include ':custom-view:tree-view'
 include ':custom-view:otp-view'
+include ':custom-view:speed-bar-view'
 
 include ':library:haibincalendarview'

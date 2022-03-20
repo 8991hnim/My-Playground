@@ -50,6 +50,7 @@ object Modules {
         const val polygonProgressView = ":custom-view:polygon-progress-view"
         const val treeView = ":custom-view:tree-view"
         const val otpView = ":custom-view:otp-view"
+        const val speedBarView = ":custom-view:speed-bar-view"
     }
 
     object Libraries {

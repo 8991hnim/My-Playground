@@ -47,4 +47,10 @@
         android:onClick="navOtpView"
         android:text="Otp View" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="navSpeedBarView"
+        android:text="Speed Bar View" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>

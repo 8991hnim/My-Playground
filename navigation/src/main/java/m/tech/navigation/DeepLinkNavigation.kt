@@ -53,6 +53,12 @@ object DeepLinkNavigation {
                 context.startActivity(this)
             }
         }
+
+        fun navToSpeedBarView(context: Context){
+            DeepLinkManager.SpeedBarView.getDeepLinkIntent(context).apply {
+                context.startActivity(this)
+            }
+        }
     }
 
 

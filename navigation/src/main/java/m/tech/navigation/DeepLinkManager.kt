@@ -11,6 +11,7 @@ import m.tech.navigation.DeepLinkConstants.COLLAPSE_TEXT_VIEW
 import m.tech.navigation.DeepLinkConstants.OTP_VIEW
 import m.tech.navigation.DeepLinkConstants.POLYGON_IMAGE_VIEW
 import m.tech.navigation.DeepLinkConstants.POLYGON_PROGRESS_VIEW
+import m.tech.navigation.DeepLinkConstants.SPEED_BAR_VIEW
 import m.tech.navigation.DeepLinkConstants.TREE_VIEW
 
 /**
@@ -59,6 +60,11 @@ internal sealed class DeepLinkManager {
     object OtpView : DeepLinkManager() {
         override val link: String
             get() = OTP_VIEW
+    }
+
+    object SpeedBarView : DeepLinkManager() {
+        override val link: String
+            get() = SPEED_BAR_VIEW
     }
 
 }

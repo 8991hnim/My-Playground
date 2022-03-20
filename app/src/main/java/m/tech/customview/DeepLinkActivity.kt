@@ -4,6 +4,8 @@ import android.app.Activity
 import android.os.Bundle
 import com.airbnb.deeplinkdispatch.BaseDeepLinkDelegate
 import com.airbnb.deeplinkdispatch.DeepLinkHandler
+import com.example.speed_bar_view.SpeedBarViewDeepLinkModule
+import com.example.speed_bar_view.SpeedBarViewDeepLinkModuleRegistry
 import com.gapo.otp_view.OtpViewDeepLinkModule
 import com.gapo.otp_view.OtpViewDeepLinkModuleRegistry
 import m.tech.calendar_view.CalendarViewDeepLinkModule
@@ -33,6 +35,7 @@ import m.tech.tree_view.TreeViewDeepLinkModuleRegistry
         PolygonProgressViewDeepLinkModule::class,
         TreeViewDeepLinkModule::class,
         OtpViewDeepLinkModule::class,
+        SpeedBarViewDeepLinkModule::class,
     ]
 )
 class DeepLinkActivity : Activity() {
@@ -49,7 +52,8 @@ class DeepLinkActivity : Activity() {
                 CalendarViewDeepLinkModuleRegistry(),
                 PolygonProgressViewDeepLinkModuleRegistry(),
                 TreeViewDeepLinkModuleRegistry(),
-                OtpViewDeepLinkModuleRegistry()
+                OtpViewDeepLinkModuleRegistry(),
+                SpeedBarViewDeepLinkModuleRegistry(),
             )
         )
 

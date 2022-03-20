@@ -71,6 +71,7 @@ dependencies {
     implementation project(Modules.Features.polygonProgressView)
     implementation project(Modules.Features.treeView)
     implementation project(Modules.Features.otpView)
+    implementation project(Modules.Features.speedBarView)
 
     implementation Fundamentals.Kotlin.stdLib
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="speed_bar_line_color">#FFA000</color>
+    <color name="speed_bar_bold_line_color">#FFFFFF</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="circle_stroke_color">#55A3EF</color>
+    <color name="circle_color_ok">#333333</color>
+</resources>

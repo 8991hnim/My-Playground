@@ -14,5 +14,6 @@ object DeepLinkConstants {
     const val POLYGON_PROGRESS_VIEW = "polygon_progress_view"
     const val TREE_VIEW = "tree_view"
     const val OTP_VIEW = "otp_view"
+    const val SPEED_BAR_VIEW = "speed_bar_view"
 
 }
